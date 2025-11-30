@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Utama</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ffd1e8, #ff9acb);
+      text-align: center;
+      color: #4a0032;
+    }
+    .container {
+      padding: 40px;
+    }
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 28px;
+      background: #ff5fa2;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background: #ff3d8c;
+      transform: scale(1.05);
+    }
+    .music-box {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat Datang Jenie 💖</h1>
+
+    <a class="btn" href="journey.html">🚀 Journey Begins</a>
+    <a class="btn" href="halaman_ultah.html">🎂 Halaman Ulang Tahun</a>
+
+    <div class="music-box">
+      <h2>🎧 Background Music</h2>
+      <p>Musik diputar otomatis 🎵</p>
+
+      <!-- Musik Auto Play + Unmute -->
+      <audio id="bg-music" src="daylight.mp3" autoplay></audio>
+    </div>
+  </div>
+
+  <script>
+    // Pastikan musik dijalankan otomatis di beberapa browser
+    document.addEventListener("click", function () {
+      const audio = document.getElementById("bg-music");
+      if (audio.paused) audio.play();
+    });
+  </script>
+</body>
+</html>
